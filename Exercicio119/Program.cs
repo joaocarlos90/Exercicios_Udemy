@@ -44,7 +44,7 @@ namespace Exercicio119
 
             for (int i = 1; i <= numberOfContract; i++)
             {
-                Console.WriteLine("Enter" + i + "#" + "contract data: ");
+                Console.WriteLine($"Enter {i}# contract data: ");
                 Console.WriteLine("Date (dd/mm/yyyy ");
 
                 hourContract.Date = DateTime.Parse(Console.ReadLine().ToString());
@@ -83,10 +83,10 @@ namespace Exercicio119
                 format.Parse(convert);
                 if (dateGetMonth == convert)
                 {
-                    Console.WriteLine("Name: " + workerName);
-                    Console.WriteLine("Department: " + departmentName);
+                    Console.WriteLine($"Name: {workerName}");
+                    Console.WriteLine($"Department: {departmentName}");
                     var totalvalue = hourContract.TotalValue(date.Hours, date.ValuePerHour, worker.BaseSalary);
-                    Console.WriteLine("Incom for " + dateGetMonth + ":  " + totalvalue);
+                    Console.WriteLine($"Incom for {dateGetMonth} :  {totalvalue}");
                 }
             }
 
